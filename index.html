@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Legal Framework | Official Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🏛️ Indian Legal Framework Directory</h1>
+        <p>A simple, direct index of official Government of India bare acts & legal sources.</p>
+    </header>
+
+    <input type="text" id="search" placeholder="Search laws, categories, or keywords (e.g. BNS, Constitution, Tax)..." onkeyup="filterLinks()">
+
+    <div id="content">
+        <!-- Official Master Portals -->
+        <div class="category-card">
+            <div class="category-title">🌐 Official Master Portals</div>
+            <ul>
+                <li><a href="https://www.indiacode.nic.in/" target="_blank">India Code (Official Repository of Central & State Acts)</a> <span class="source-tag">NIC / MoLJ</span></li>
+                <li><a href="https://legislative.gov.in/" target="_blank">Legislative Department (Ministry of Law & Justice)</a> <span class="source-tag">Official</span></li>
+                <li><a href="https://judgments.ecourts.gov.in/" target="_blank">Supreme Court e-SCR Judgment Portal</a> <span class="source-tag">eCourts</span></li>
+            </ul>
+        </div>
+
+        <!-- Constitutional Law -->
+        <div class="category-card">
+            <div class="category-title">📜 Constitution of India</div>
+            <ul>
+                <li><a href="https://legislative.gov.in/constitution-of-india/" target="_blank">The Constitution of India (Complete text & latest amendments)</a> <span class="source-tag">legislative.gov.in</span></li>
+            </ul>
+        </div>
+
+        <!-- Major Codes / Criminal Law -->
+        <div class="category-card">
+            <div class="category-title">⚖️ Major Codes & Criminal Law</div>
+            <ul>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/21430" target="_blank">Bharatiya Nyaya Sanhita, 2023 (BNS)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/21431" target="_blank">Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/21432" target="_blank">Bharatiya Sakshya Adhiniyam, 2023 (BSA)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/2191" target="_blank">Code of Civil Procedure, 1908 (CPC)</a> <span class="source-tag">India Code</span></li>
+            </ul>
+        </div>
+
+        <!-- Commercial & Digital Laws -->
+        <div class="category-card">
+            <div class="category-title">💻 Technology, Commercial & Corporate Laws</div>
+            <ul>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/20420" target="_blank">Digital Personal Data Protection Act, 2023 (DPDP)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/1999" target="_blank">Information Technology Act, 2000 (IT Act)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/2114" target="_blank">Companies Act, 2013</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/2155" target="_blank">Insolvency and Bankruptcy Code, 2016 (IBC)</a> <span class="source-tag">India Code</span></li>
+                <li><a href="https://www.indiacode.nic.in/handle/123456789/2187" target="_blank">Indian Contract Act, 1872</a> <span class="source-tag">India Code</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function filterLinks() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const cards = document.querySelectorAll('.category-card');
+
+        cards.forEach(card => {
+            const items = card.querySelectorAll('li');
+            let hasMatch = false;
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = '';
+                    hasMatch = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            card.style.display = hasMatch ? '' : 'none';
+        });
+    }
+</script>
+</body>
+</html>
