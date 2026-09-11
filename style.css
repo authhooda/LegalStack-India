@@ -1,13 +1,18 @@
 :root {
     --bg: #0f172a;
     --card-bg: #1e293b;
-    --card-border: #334155;
-    --text-main: #f8fafc;
+    --border: #334155;
+    --text: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #38bdf8;
-    --tip-bg: #1e3a5f;
-    --tip-border: #0284c7;
-    --tip-text: #e0f2fe;
+    
+    /* Sub-box colors */
+    --box-bg-1: #0f2744;
+    --box-border-1: #1e40af;
+    --box-bg-2: #162a3f;
+    --box-border-2: #0284c7;
+    --tip-bg: #1e3a34;
+    --tip-border: #10b981;
 }
 
 * {
@@ -17,40 +22,39 @@
 
 body {
     background-color: var(--bg);
-    color: var(--text-main);
+    color: var(--text);
     margin: 0;
     padding: 2rem 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .container {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 header {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
     margin-bottom: 0.5rem;
     font-size: 1.8rem;
-    color: var(--text-main);
 }
 
 header p {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-top: 0;
 }
 
 .section-heading {
-    color: #cbd5e1;
-    font-size: 1.3rem;
+    color: #e2e8f0;
+    font-size: 1.25rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--card-border);
+    border-bottom: 2px solid var(--border);
     padding-bottom: 0.4rem;
 }
 
@@ -58,11 +62,11 @@ header p {
     width: 100%;
     padding: 14px 18px;
     border-radius: 8px;
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--border);
     background: var(--card-bg);
-    color: var(--text-main);
+    color: var(--text);
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     outline: none;
     transition: border-color 0.2s;
 }
@@ -71,20 +75,22 @@ header p {
     border-color: var(--accent);
 }
 
+/* Master Item Card */
 .item-card {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
 }
 
 .card-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     margin-bottom: 1rem;
 }
 
@@ -101,30 +107,73 @@ header p {
 
 .badge {
     background: #334155;
-    color: #e2e8f0;
+    color: #cbd5e1;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 9999px;
-    white-space: nowrap;
 }
 
-.card-body p {
-    margin: 0.4rem 0;
+/* 2-Column Grid for What/When Boxes */
+.box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+@media (max-width: 650px) {
+    .box-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sub-Boxes */
+.info-box {
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+}
+
+.info-box p {
+    margin: 0.25rem 0 0 0;
     color: #cbd5e1;
-    font-size: 0.95rem;
+    line-height: 1.45;
 }
 
-.card-body strong {
-    color: var(--text-main);
+.box-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
 }
 
-.tip-box {
+/* Color Variants */
+.purpose {
+    background: var(--box-bg-1);
+    border-color: var(--box-border-1);
+}
+.purpose .box-label {
+    color: #93c5fd;
+}
+
+.usage {
+    background: var(--box-bg-2);
+    border-color: var(--box-border-2);
+}
+.usage .box-label {
+    color: #7dd3fc;
+}
+
+.tip {
     background: var(--tip-bg);
-    border-left: 4px solid var(--tip-border);
-    color: var(--tip-text);
-    padding: 10px 14px;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.88rem;
-    margin-top: 1rem;
+    border-color: var(--tip-border);
+}
+.tip .box-label {
+    color: #6ee7b7;
+}
+.tip p {
+    color: #d1fae5;
 }
