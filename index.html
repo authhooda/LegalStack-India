@@ -11,45 +11,63 @@
 <div class="container">
     <header>
         <h1>🏛️ Citizen Legal & Administrative Guide</h1>
-        <p>Direct official links, clear plain-language guides, and navigation tips to avoid unnecessary courthouse visits.</p>
+        <p>Official links, plain-language explanations, and navigation tips to bypass unnecessary court visits.</p>
     </header>
 
-    <input type="text" id="search" placeholder="Search a task or topic (e.g., affidavit, stamp paper, police complaint, bns, tax)..." onkeyup="filterCards()">
+    <input type="text" id="search" placeholder="Search a task or keyword (e.g. affidavit, stamp paper, police, nalsa, bns)..." onkeyup="filterCards()">
 
     <div id="content">
 
-        <!-- Category 1: Skip Court / Everyday Paperwork -->
+        <!-- Category 1 -->
         <h2 class="section-heading">⚡ Everyday Paperwork & Out-of-Court Services</h2>
 
         <div class="item-card">
             <div class="card-header">
                 <a href="https://darpg.gov.in/sites/default/files/Self%20Certification_0.pdf" target="_blank" class="card-title">
-                    Self-Attestation Guidelines (Abolition of Notarized Affidavits) ↗
+                    Self-Attestation (Abolition of Notarized Affidavits) ↗
                 </a>
-                <span class="badge">DARPG / Gov Order</span>
+                <span class="badge">DARPG / Central Gov</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> Official Central Government circular mandating self-certification instead of notarized affidavits for routine civil documentation.</p>
-                <p><strong>When to use:</strong> When government departments, colleges, or offices demand a notarized affidavit for name changes, address proof, or basic certificates.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Keep a PDF copy or printout of this official guideline. Most standard administrative forms accept a self-signed declaration without visiting a court notary.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>Official central circular replacing notarized court affidavits with simple self-signed declarations for general public services.</p>
                 </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>When government offices, universities, or banks ask for an affidavit for name change, address proof, or basic certificates.</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Keep a downloaded copy of this order. Most administrative departments must accept a signed self-declaration—you do not need to pay a court notary.</p>
             </div>
         </div>
 
         <div class="item-card">
             <div class="card-header">
                 <a href="https://www.shcilestamp.com/" target="_blank" class="card-title">
-                    SHCIL e-Stamping System ↗
+                    SHCIL e-Stamping Portal ↗
                 </a>
                 <span class="badge">Online Stamp Paper</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> Official portal by Stock Holding Corporation of India to purchase and print non-judicial stamp papers online.</p>
-                <p><strong>When to use:</strong> Rental agreements, power of attorney, basic business contracts, or declarations.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Check whether your state supports "Home Printing". If yes, you can pay online via UPI/NetBanking and print your e-stamp directly on legal paper without queuing at stamp vendors.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>Official digital portal to buy and generate non-judicial stamp papers directly from the Stock Holding Corporation of India.</p>
                 </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>Rent agreements, affidavits, indemnity bonds, power of attorney, and commercial contracts.</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Select your state and check if "Home Printing" is available. Pay via UPI/NetBanking to print the certificate directly at home without queuing at court vendor stalls.</p>
             </div>
         </div>
 
@@ -58,14 +76,23 @@
                 <a href="https://nalsa.gov.in/" target="_blank" class="card-title">
                     NALSA (Free Legal Aid & Lok Adalat) ↗
                 </a>
-                <span class="badge">Alternative Dispute Resolution</span>
+                <span class="badge">Dispute Resolution</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> National Legal Services Authority providing free legal representation and pre-litigation settlement through Lok Adalats.</p>
-                <p><strong>When to use:</strong> Settling minor disputes (traffic challans, electricity/water bill disputes, insurance claims, petty financial disagreements) without filing court cases.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Settlements reached in Lok Adalat are final and binding, have no court fees, and cannot be appealed—saving years of litigation.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>Statutory body providing free legal counsel to eligible citizens and organizing out-of-court settlements via Lok Adalats.</p>
                 </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>Settling traffic challans, pending electricity/water bills, minor financial disagreements, and pre-litigation disputes without filing a lawsuit.</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Lok Adalat awards have the same status as a civil court decree, incur zero court fees, and are non-appealable (giving final closure).</p>
             </div>
         </div>
 
@@ -74,18 +101,27 @@
                 <a href="https://www.tele-law.in/" target="_blank" class="card-title">
                     Tele-Law Service (Dept of Justice) ↗
                 </a>
-                <span class="badge">Direct Legal Advice</span>
+                <span class="badge">Pre-Litigation Advice</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> Connects citizens directly with panel lawyers for pre-litigation advice via video call or telephone at village Common Service Centres (CSCs).</p>
-                <p><strong>When to use:</strong> Getting early legal advice to understand if your matter actually requires filing a case before hiring an expensive private lawyer.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Free for women, SC/ST, and low-income individuals. You can register directly using your mobile number or visit your nearest CSC kiosk.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>Direct video or telephone consultation with certified panel lawyers via village Common Service Centres (CSCs) or mobile app.</p>
                 </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>Before hiring a lawyer, to understand if your situation actually warrants litigation or can be settled administratively.</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Free of cost for women, SC/ST, and low-income citizens. You can self-register using an OTP or visit any local CSC center.</p>
             </div>
         </div>
 
-        <!-- Category 2: Central Bare Acts & Codes -->
+        <!-- Category 2 -->
         <h2 class="section-heading">📜 Official Bare Acts & Legal Codes</h2>
 
         <div class="item-card">
@@ -95,28 +131,21 @@
                 </a>
                 <span class="badge">Master Repository</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> The single official digital archive for all Central and State Bare Acts, sub-rules, and notifications.</p>
-                <p><strong>When to use:</strong> Finding the exact, current text of any Indian law (e.g., BNS, Contract Act, DPDP Act, Companies Act).</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Click on <em>"Acts by Year"</em> or use the search bar to type the Act name. Look for the "Repealed" or "In Force" tag next to the Act title to avoid referencing outdated laws.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>The centralized government archive containing every central and state bare act, rule, and amendment in active law.</p>
+                </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>Verifying exact statutory wording for any Indian law (e.g., Bharatiya Nyaya Sanhita, Consumer Protection, DPDP, IT Act).</p>
                 </div>
             </div>
-        </div>
 
-        <div class="item-card">
-            <div class="card-header">
-                <a href="https://legislative.gov.in/constitution-of-india/" target="_blank" class="card-title">
-                    The Constitution of India (Official Text) ↗
-                </a>
-                <span class="badge">Fundamental Law</span>
-            </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> Full bilingual (English/Hindi) text of the Constitution with all latest Constitutional Amendments.</p>
-                <p><strong>When to use:</strong> Researching Fundamental Rights (Articles 12–35), Directive Principles, or structure of governance.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Always verify that the PDF downloaded has the updated year on the title page to ensure it includes the latest constitutional amendments.
-                </div>
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Use the search bar and look at the "Status" column to verify the Act is "In Force" and not "Repealed". You can view acts section-by-section or download the full PDF.</p>
             </div>
         </div>
 
@@ -125,14 +154,23 @@
                 <a href="https://services.ecourts.gov.in/" target="_blank" class="card-title">
                     eCourts Services Portal ↗
                 </a>
-                <span class="badge">Case Tracking</span>
+                <span class="badge">Court Case Tracking</span>
             </div>
-            <div class="card-body">
-                <p><strong>What it is:</strong> National database to track case statuses, orders, and daily cause lists for High Courts and District Courts.</p>
-                <p><strong>When to use:</strong> Tracking a live court case without visiting the registry physically.</p>
-                <div class="tip-box">
-                    💡 <strong>Pro Tip:</strong> Keep your 16-digit **CNR Number** handy (found on your case receipt). Entering the CNR number gives instant access to case history and next hearing dates.
+            
+            <div class="box-grid">
+                <div class="info-box purpose">
+                    <span class="box-label">📌 What it is</span>
+                    <p>Official case monitoring portal covering District Courts, High Courts, and judicial tribunals across India.</p>
                 </div>
+                <div class="info-box usage">
+                    <span class="box-label">🎯 When to use</span>
+                    <p>Checking hearing dates, orders, and case progress without traveling to the court registry in person.</p>
+                </div>
+            </div>
+
+            <div class="info-box tip">
+                <span class="box-label">💡 Navigation / Pro Tip</span>
+                <p>Use the 16-character **CNR Number** located at the top of your case acknowledgement slip for one-click access without needing advocate details.</p>
             </div>
         </div>
 
@@ -145,8 +183,8 @@
         const cards = document.querySelectorAll('.item-card');
 
         cards.forEach(card => {
-            const content = card.textContent.toLowerCase();
-            card.style.display = content.includes(query) ? '' : 'none';
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(query) ? '' : 'none';
         });
     }
 </script>
