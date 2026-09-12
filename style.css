@@ -183,20 +183,33 @@ header p {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .discord-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: #5865f2;
     color: #ffffff;
-    padding: 8px 16px;
+    padding: 10px 18px;
     border-radius: 6px;
     font-weight: 600;
     font-size: 0.9rem;
+    line-height: 1; /* Eliminates vertical misalignment */
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent; /* Removes mobile tap box outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Forces the SVG to stay crisp and properly sized on mobile viewports */
+.discord-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: block;
 }
 
 .discord-btn:hover {
