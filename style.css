@@ -6,7 +6,7 @@
     --text-muted: #94a3b8;
     --accent: #38bdf8;
     
-    /* Sub-box colors */
+    /* Sub-box theme colors */
     --box-bg-1: #0f2744;
     --box-border-1: #1e40af;
     --box-bg-2: #162a3f;
@@ -15,17 +15,18 @@
     --tip-border: #10b981;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
     background-color: var(--bg);
     color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
     padding: 2rem 1rem;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -68,7 +69,7 @@ header p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     outline: none;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s ease;
 }
 
 #search:focus {
@@ -202,4 +203,8 @@ header p {
     background: #4752c4;
     transform: translateY(-1px);
     color: #ffffff;
+}
+
+.discord-btn:active {
+    transform: translateY(0);
 }
